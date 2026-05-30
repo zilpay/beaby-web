@@ -54,7 +54,7 @@
 
 	"security_badge": "Quantum Resistant",
 	"security_title": "How Does Bearby Protect Against Quantum Attacks?",
-	"security_desc": "Bearby uses NTRU Prime (post-quantum key encapsulation), AES-256, and Kuznechik in a dual-layer symmetric encryption scheme, with Argon2id key derivation. Unlike wallets relying on ECDSA — which a quantum computer running Shor's algorithm could break — Bearby's architecture is designed to protect assets against threats that don't yet exist.",
+	"security_desc": "Bearby uses NTRU Prime (post-quantum key encapsulation), AES-256, and Kuznechik in a dual-layer symmetric encryption scheme, with Argon2id key derivation. Most wallets rely on standard AES encryption with PBKDF2 for key protection — Bearby's architecture adds post-quantum key encapsulation and memory-hard key derivation to protect against both current and future threats.",
 	"security_rust_title": "Written in Rust",
 	"security_rust_desc": "Core cryptographic engine built with Rust — a memory-safe language that eliminates buffer overflows, use-after-free, and data races at compile time.",
 	"security_tag_memory": "Memory Safe",
