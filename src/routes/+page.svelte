@@ -26,7 +26,7 @@
 		applicationSubCategory: 'Cryptocurrency Wallet',
 		operatingSystem: 'Android, iOS, Windows, macOS, Linux, Chrome, Firefox',
 		description:
-			'Quantum-resistant, non-custodial crypto wallet with on-device key storage and zero data collection. Uses NTRU Prime, AES-256, Kuznechik, and Argon2. Supports Bitcoin, Ethereum, and EVM-compatible chains.',
+			'Non-custodial crypto wallet with post-quantum encrypted key storage and zero data collection. Uses NTRU Prime, AES-256, Kuznechik, and Argon2. Supports Bitcoin, Ethereum, and EVM-compatible chains.',
 		url: SITE_URL,
 		image: OG_IMAGE,
 		featureList:
@@ -51,7 +51,7 @@
 		screenshot: {
 			'@type': 'ImageObject',
 			url: `${SITE_URL}/img/hero-bg.webp`,
-			caption: 'Bearby quantum-resistant wallet interface'
+			caption: 'Bearby non-custodial wallet interface'
 		},
 		offers: {
 			'@type': 'Offer',
@@ -75,7 +75,7 @@
 		name: 'Bearby',
 		url: SITE_URL,
 		description:
-			'Official website of Bearby, the quantum-resistant non-custodial cryptocurrency wallet.',
+			'Official website of Bearby, the non-custodial cryptocurrency wallet with post-quantum encrypted key storage.',
 		potentialAction: {
 			'@type': 'SearchAction',
 			target: `${SITE_URL}/?q={search_term_string}`,
@@ -95,7 +95,7 @@
 			height: 512
 		},
 		description:
-			'Bearby is a quantum-resistant, non-custodial cryptocurrency wallet using post-quantum cryptography (NTRU Prime, AES-256, Kuznechik, Argon2) to protect digital assets against future quantum computing threats. Available as a browser extension and mobile app for Bitcoin, Ethereum, and EVM-compatible chains.',
+			'Bearby is a non-custodial cryptocurrency wallet that protects your stored keys with post-quantum encryption (NTRU Prime, AES-256, Kuznechik, Argon2), guarding key material against future quantum computing threats. Available as a browser extension and mobile app for Bitcoin, Ethereum, and EVM-compatible chains.',
 		foundingDate: '2022',
 		contactPoint: {
 			'@type': 'ContactPoint',

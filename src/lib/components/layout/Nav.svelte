@@ -26,6 +26,9 @@
 			<a href="/#features" class="nav-link">{m.nav_features()}</a>
 			<a href="/#secure" class="nav-link">{m.nav_security()}</a>
 			<a href="/#integrations" class="nav-link">{m.nav_integrations()}</a>
+			<a href={m.blog_url()} class="nav-link" target="_blank" rel="noopener noreferrer"
+				>{m.nav_blog()}</a
+			>
 		</div>
 
 		<div class="nav-actions">
@@ -107,6 +110,13 @@
 		<a href="/#features" class="mobile-link" onclick={closeMenu}>{m.nav_features()}</a>
 		<a href="/#secure" class="mobile-link" onclick={closeMenu}>{m.nav_security()}</a>
 		<a href="/#integrations" class="mobile-link" onclick={closeMenu}>{m.nav_integrations()}</a>
+		<a
+			href={m.blog_url()}
+			class="mobile-link"
+			target="_blank"
+			rel="noopener noreferrer"
+			onclick={closeMenu}>{m.nav_blog()}</a
+		>
 		<a href="/#downloads" class="mobile-link" onclick={closeMenu}>{m.nav_download()}</a>
 	</div>
 {/if}

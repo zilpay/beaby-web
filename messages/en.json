@@ -6,10 +6,13 @@
 	"nav_features": "Features",
 	"nav_security": "Security",
 	"nav_integrations": "Integrations",
+	"nav_blog": "Blog",
 	"nav_download": "Download",
 
-	"hero_title": "Quantum-Resistant Portal to the Decentralized World",
-	"hero_subtitle": "Quantum-resistant, multi-currency decentralized wallet, functioning as a browser extension compatible with the EVM-compatible networks.",
+	"blog_url": "https://blog.bearby.io",
+
+	"hero_title": "Your Portal to the Decentralized World",
+	"hero_subtitle": "Multi-currency decentralized wallet with post-quantum encrypted storage, functioning as a browser extension compatible with EVM-compatible networks.",
 	"hero_github_btn": "Open-Source Github",
 
 	"wallet_title": "Why Can't Bearby Be Seized, Frozen, or Shut Down?",
@@ -50,18 +53,18 @@
 	"showcase_dapps_title": "In app dApps and browsers",
 	"showcase_dapps_desc": "Summarize long texts in seconds or generate professional content from scratch. Perfect for professionals!",
 	"showcase_bitcoin_title": "Native Bitcoin Support",
-	"showcase_bitcoin_desc": "Native Bitcoin Support to store and trade your bitcoin securely. Designed to protect assets from Quantum risks.",
+	"showcase_bitcoin_desc": "Native Bitcoin support to store and trade your bitcoin securely, with post-quantum encrypted key storage.",
 
-	"security_badge": "Quantum Resistant",
-	"security_title": "How Does Bearby Protect Against Quantum Attacks?",
-	"security_desc": "Bearby uses NTRU Prime (post-quantum key encapsulation), AES-256, and Kuznechik in a dual-layer symmetric encryption scheme, with Argon2id key derivation. Most wallets rely on standard AES encryption with PBKDF2 for key protection — Bearby's architecture adds post-quantum key encapsulation and memory-hard key derivation to protect against both current and future threats.",
+	"security_badge": "Post-Quantum Storage",
+	"security_title": "How Does Bearby Protect Your Keys?",
+	"security_desc": "Bearby encrypts your stored keys with NTRU Prime (post-quantum key encapsulation), AES-256, and Kuznechik in a dual-layer symmetric encryption scheme, with Argon2id key derivation. Most wallets rely on standard AES encryption with PBKDF2 for key protection — Bearby's storage architecture adds post-quantum key encapsulation and memory-hard key derivation, so your key material stays protected against both current and future threats.",
 	"security_rust_title": "Written in Rust",
 	"security_rust_desc": "Core cryptographic engine built with Rust — a memory-safe language that eliminates buffer overflows, use-after-free, and data races at compile time.",
 	"security_tag_memory": "Memory Safe",
 	"security_tag_abstractions": "Zero-Cost Abstractions",
 	"security_tag_gc": "No GC Pauses",
-	"security_storage_title": "Quantum-Resistant Storage",
-	"security_storage_desc": "Private keys are encrypted with layered post-quantum algorithms, ensuring your assets remain secure even against future quantum computers.",
+	"security_storage_title": "Post-Quantum Encrypted Storage",
+	"security_storage_desc": "Private keys are encrypted at rest with a post-quantum key-encapsulation layer, keeping your stored keys protected even as quantum computers mature.",
 	"security_primitives_title": "Cryptographic Primitives",
 	"crypto_ntru_label": "Post-Quantum",
 	"crypto_ntru_desc": "Lattice-based cryptography providing future-proof resistance against quantum computing attacks.",
@@ -107,6 +110,7 @@
 	"dl_coming_soon": "Coming Soon",
 
 	"footer_privacy": "Privacy Policy",
+	"footer_blog": "Blog",
 	"footer_contact": "Contact Us",
 	"footer_github": "GitHub",
 	"footer_copyright": "©{year} Rinat.IP.",
@@ -162,9 +166,9 @@
 	"error_generic_title": "Something Went Wrong",
 	"error_generic_description": "An unexpected error occurred. Please try again later.",
 
-	"seo_title": "Bearby — Quantum-Resistant Crypto Wallet",
-	"seo_description": "Quantum-resistant crypto wallet. Non-custodial, on-device keys, zero data collection. Supports Bitcoin, Ethereum & EVM chains.",
-	"seo_keywords": "Bearby, crypto wallet, quantum-resistant wallet, quantum-resistant, browser extension wallet, non-custodial wallet, Bitcoin wallet, Ethereum wallet, EVM wallet, decentralized wallet, secure crypto wallet, post-quantum cryptography, mobile crypto wallet",
-	"seo_og_title": "Bearby — Quantum-Resistant Crypto Wallet",
-	"seo_og_description": "Non-custodial, quantum-resistant wallet for Bitcoin, Ethereum & EVM. On-device keys, zero data collection, military-grade encryption."
+	"seo_title": "Bearby — Secure Non-Custodial Crypto Wallet",
+	"seo_description": "Non-custodial crypto wallet with post-quantum encrypted key storage. On-device keys, zero data collection. Supports Bitcoin, Ethereum & EVM chains.",
+	"seo_keywords": "Bearby, crypto wallet, post-quantum storage, non-custodial wallet, browser extension wallet, Bitcoin wallet, Ethereum wallet, EVM wallet, decentralized wallet, secure crypto wallet, post-quantum cryptography, mobile crypto wallet",
+	"seo_og_title": "Bearby — Secure Non-Custodial Crypto Wallet",
+	"seo_og_description": "Non-custodial wallet for Bitcoin, Ethereum & EVM with post-quantum encrypted key storage. On-device keys, zero data collection."
 }

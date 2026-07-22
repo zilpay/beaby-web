@@ -14,6 +14,9 @@
 				<a href="/privacy-policy" class="footer-link">{m.footer_privacy()}</a>
 				<a href="/terms" class="footer-link">Terms</a>
 				<a href="/security" class="footer-link">Security</a>
+				<a href={m.blog_url()} class="footer-link" target="_blank" rel="noopener noreferrer"
+					>{m.footer_blog()}</a
+				>
 				<a href="mailto:contact@bearby.io" class="footer-link">{m.footer_contact()}</a>
 				<span class="footer-copy">{m.footer_copyright({ year: String(year) })}</span>
 			</div>

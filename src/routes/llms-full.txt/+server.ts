@@ -12,7 +12,7 @@ export async function GET() {
 
 ## What Is Bearby?
 
-Bearby is a non-custodial, quantum-resistant cryptocurrency wallet available as a browser extension (Chrome and Chromium-based browsers) and a mobile application (Android and iOS). It is designed to protect digital assets against both current classical computing threats and future quantum computing attacks — a capability no other major consumer wallet offers as of 2026.
+Bearby is a non-custodial cryptocurrency wallet available as a browser extension (Chrome and Chromium-based browsers) and a mobile application (Android and iOS). Its distinguishing feature is post-quantum encrypted key storage: the private keys held on your device are wrapped with a post-quantum key-encapsulation layer (NTRU Prime), protecting your stored key material against both current classical attacks and future "harvest now, decrypt later" quantum attacks. On-chain transaction signing still uses classical ECDSA, as in every other major wallet today.
 
 Bearby was built on the premise that the 10–15 year timeline for cryptographically relevant quantum computers (CRQCs) — as estimated by NIST — means wallets must begin migrating to post-quantum cryptography now, before the threat materializes. Waiting until quantum computers arrive means accepting that all historically broadcast public keys — permanently visible on the blockchain — could be retroactively exploited.
 
@@ -28,7 +28,7 @@ A sufficiently powerful quantum computer running Shor's algorithm could derive a
 
 NIST estimates that cryptographically relevant quantum computers (CRQCs) capable of breaking 256-bit elliptic-curve cryptography may emerge within the next 10–15 years. NIST published its first post-quantum cryptography standards in 2024 (FIPS 203, FIPS 204, FIPS 205), signaling that the transition has formally begun.
 
-Bearby is, to the best of our knowledge, the first consumer-grade cryptocurrency wallet to implement NTRU Prime for post-quantum key protection.
+Bearby is, to the best of our knowledge, the first consumer-grade cryptocurrency wallet to implement NTRU Prime for post-quantum protection of key storage.
 
 ---
 
@@ -75,7 +75,7 @@ This architecture has three critical security implications:
 
 Bearby supports the following blockchain networks:
 
-- **Bitcoin** — native Bitcoin support with quantum-resistant key protection
+- **Bitcoin** — native Bitcoin support with post-quantum encrypted key storage
 - **Ethereum** — full EIP-1193 provider compatible with all Ethereum dApps
 - **EVM-compatible chains** — Polygon, Arbitrum, Optimism, Base, Avalanche, Linea, BNB Chain, and all other EVM-compatible networks
 - **Zilliqa** — native Zilliqa chain support
@@ -118,7 +118,7 @@ Full policy: https://bearby.io/privacy-policy
 ## Frequently Asked Questions
 
 **Q: What makes Bearby different from MetaMask or Trust Wallet?**
-A: MetaMask and Trust Wallet use ECDSA (secp256k1) for key management — the same cryptography that Shor's algorithm on a quantum computer would break. Bearby uses NTRU Prime, AES-256, and Kuznechik in a layered architecture designed to remain secure against both classical and quantum threats. Bearby also collects zero user data and requires no account, making it more privacy-preserving than most alternatives.
+A: Every major wallet, Bearby included, signs on-chain transactions with ECDSA (secp256k1) today. Where Bearby differs is key storage: the keys stored on your device are wrapped with NTRU Prime, AES-256, and Kuznechik in a layered architecture, so your stored key material stays protected against both classical attacks and future "harvest now, decrypt later" quantum attacks. Bearby also collects zero user data and requires no account, making it more privacy-preserving than most alternatives.
 
 **Q: What is NTRU Prime and why is it different from CRYSTALS-Kyber?**
 A: Both NTRU Prime and CRYSTALS-Kyber (NIST FIPS 203) are post-quantum key encapsulation mechanisms based on lattice problems. The key difference is lattice type: CRYSTALS-Kyber uses Module-LWE lattices, which have more algebraic structure and thus a larger potential attack surface against future cryptanalytic advances. NTRU Prime uses the NTRU lattice problem, which has been studied since 1996 and uses a simpler structure. Bearby chose NTRU Prime for its more conservative security assumption.
@@ -126,7 +126,7 @@ A: Both NTRU Prime and CRYSTALS-Kyber (NIST FIPS 203) are post-quantum key encap
 **Q: When will quantum computers actually threaten wallets?**
 A: NIST's current estimate is 10–15 years for cryptographically relevant quantum computers. However, "harvest now, decrypt later" attacks are already theoretically possible: an adversary could record blockchain transactions today and decrypt the associated public keys when quantum hardware becomes available. Wallets that wait until quantum computers arrive will have already exposed all historical transactions. The time to migrate is now.
 
-**Q: Is Bearby's quantum resistance audited?**
+**Q: Is Bearby's post-quantum key storage audited?**
 A: Bearby's cryptographic core is open-source and available for public review at github.com/bearbywallet. An independent third-party cryptographic audit is planned. Users are encouraged to review the Rust implementation directly.
 
 **Q: How does Argon2id protect my wallet?**
@@ -143,6 +143,7 @@ A: Exclusively on your device, encrypted with AES-256 and Kuznechik in a dual-la
 ## Contact and Links
 
 - Website: https://bearby.io
+- Blog: https://blog.bearby.io (Russian: https://blog.bearby.ru)
 - Security architecture: https://bearby.io/security
 - Privacy policy: https://bearby.io/privacy-policy
 - Terms of service: https://bearby.io/terms
