@@ -53,7 +53,6 @@
 		{ id: 'cross-border-title', title: m.privacy_sub_title25(), content: '' },
 		{ id: 'cross-border-1', content: m.privacy_p26() },
 		{ id: 'cross-border-2', content: m.privacy_p27() },
-		{ id: 'cross-border-3', content: m.privacy_p28() },
 		{ id: 'retention-title', title: m.privacy_sub_title29(), content: '' },
 		{ id: 'retention-1', content: m.privacy_p30() },
 		{ id: 'retention-2', content: m.privacy_p31() },
