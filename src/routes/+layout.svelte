@@ -22,6 +22,8 @@
 
 	let enUrl = $derived(basePath === '/' ? SITE_URL + '/' : SITE_URL + basePath);
 	let ruUrl = $derived(basePath === '/' ? SITE_URL + '/ru/' : SITE_URL + '/ru' + basePath);
+	let ptBrUrl = $derived(basePath === '/' ? SITE_URL + '/pt-BR/' : SITE_URL + '/pt-BR' + basePath);
+	let esUrl = $derived(basePath === '/' ? SITE_URL + '/es/' : SITE_URL + '/es' + basePath);
 </script>
 
 <svelte:head>
@@ -30,6 +32,8 @@
 	<link rel="alternate" hreflang="x-default" href={enUrl} />
 	<link rel="alternate" hreflang="en" href={enUrl} />
 	<link rel="alternate" hreflang="ru" href={ruUrl} />
+	<link rel="alternate" hreflang="pt-BR" href={ptBrUrl} />
+	<link rel="alternate" hreflang="es" href={esUrl} />
 </svelte:head>
 
 <Nav />

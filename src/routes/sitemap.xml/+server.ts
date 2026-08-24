@@ -15,6 +15,8 @@ export async function GET() {
 	const urls: SitemapUrl[] = [
 		{ loc: `${SITE_URL}`, changefreq: 'weekly', priority: '1.0', lastmod: today },
 		{ loc: `${SITE_URL}/ru/`, changefreq: 'weekly', priority: '0.9', lastmod: today },
+		{ loc: `${SITE_URL}/pt-BR/`, changefreq: 'weekly', priority: '0.9', lastmod: today },
+		{ loc: `${SITE_URL}/es/`, changefreq: 'weekly', priority: '0.9', lastmod: today },
 		{
 			loc: `${SITE_URL}/privacy-policy`,
 			changefreq: 'monthly',

@@ -5,7 +5,9 @@
 
 	const localeLabels: Record<string, string> = {
 		en: 'English',
-		ru: 'Русский'
+		ru: 'Русский',
+		'pt-BR': 'Português (Brasil)',
+		es: 'Español'
 	};
 
 	function select(locale: string) {
