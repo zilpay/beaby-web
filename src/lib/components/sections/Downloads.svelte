@@ -33,13 +33,13 @@
 		</div>
 	</div>
 	<div class="dl-btn">
-		{dl.disabled ? m.dl_coming_soon() : dl.action}
+		{dl.action}
 	</div>
 {/snippet}
 
 <section id="downloads" class="downloads-section">
 	<div class="container">
-		{#each [primaryDownloads.slice(0, 3), primaryDownloads.slice(3)] as row, idx (idx)}
+		{#each [primaryDownloads.slice(0, 3), primaryDownloads.slice(3)].filter((row) => row.length > 0) as row, idx (idx)}
 			<div class="downloads-row">
 				{#each row as dl (dl.platform)}
 					<a href={dl.href} class="dl-card" target="_blank" rel="noopener noreferrer">
@@ -51,21 +51,15 @@
 		{#if expanded}
 			<div class="downloads-row secondary" transition:slide={{ duration: 400 }}>
 				{#each secondaryDownloads as dl, i (dl.platform)}
-					{#if dl.disabled}
-						<div class="dl-card disabled" in:fly={{ y: 30, duration: 300, delay: i * 80 }}>
-							{@render dlCardContent(dl)}
-						</div>
-					{:else}
-						<a
-							href={dl.href}
-							class="dl-card"
-							target="_blank"
-							rel="noopener noreferrer"
-							in:fly={{ y: 30, duration: 300, delay: i * 80 }}
-						>
-							{@render dlCardContent(dl)}
-						</a>
-					{/if}
+					<a
+						href={dl.href}
+						class="dl-card"
+						target="_blank"
+						rel="noopener noreferrer"
+						in:fly={{ y: 30, duration: 300, delay: i * 80 }}
+					>
+						{@render dlCardContent(dl)}
+					</a>
 				{/each}
 			</div>
 		{/if}
@@ -135,12 +129,6 @@
 
 	.dl-card:hover {
 		border-color: var(--border-hover);
-	}
-
-	.dl-card.disabled {
-		opacity: 0.4;
-		pointer-events: none;
-		cursor: default;
 	}
 
 	.dl-inner {

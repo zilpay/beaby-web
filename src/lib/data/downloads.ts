@@ -7,7 +7,6 @@ export type Download = {
 	count: string;
 	action: string;
 	secondary?: boolean;
-	disabled?: boolean;
 };
 
 export function getDownloads(): Download[] {
@@ -38,21 +37,16 @@ export function getDownloads(): Download[] {
 			href: 'https://addons.mozilla.org/en-GB/firefox/addon/bearby/',
 			platform: 'firefox',
 			count: m.dl_count_500(),
-			action: m.dl_action_addon()
+			action: m.dl_action_addon(),
+			secondary: true
 		},
 		{
 			label: m.dl_rustore(),
 			href: 'https://www.rustore.ru/catalog/app/com.zilpaymobile',
 			platform: 'rustore',
 			count: m.dl_count_1000(),
-			action: m.dl_action_download()
-		},
-		{
-			label: m.dl_app_gallery(),
-			href: 'https://appgallery.huawei.com/app/C113872161',
-			platform: 'huawei',
-			count: m.dl_count_800(),
-			action: m.dl_action_download()
+			action: m.dl_action_download(),
+			secondary: true
 		},
 		{
 			label: m.dl_android_apk(),
@@ -63,45 +57,18 @@ export function getDownloads(): Download[] {
 			secondary: true
 		},
 		{
-			label: m.dl_windows(),
-			href: '#',
-			platform: 'windows',
-			count: m.dl_count_desktop(),
-			action: m.dl_action_download(),
-			secondary: true,
-			disabled: true
-		},
-		{
-			label: m.dl_macos(),
-			href: '#',
-			platform: 'macos',
-			count: m.dl_count_desktop(),
-			action: m.dl_action_download(),
-			secondary: true,
-			disabled: true
-		},
-		{
-			label: m.dl_linux(),
-			href: '#',
-			platform: 'linux',
-			count: m.dl_count_desktop(),
-			action: m.dl_action_download(),
-			secondary: true,
-			disabled: true
-		},
-		{
-			label: m.dl_old_chrome(),
-			href: 'https://chromewebstore.google.com/detail/bearby/papngmkmknnmfhabbckobgfpihpdgplk',
-			platform: 'old-chrome',
-			count: m.dl_count_legacy_ext(),
+			label: m.dl_massa_chrome(),
+			href: 'https://chromewebstore.google.com/detail/bearbylegacy/papngmkmknnmfhabbckobgfpihpdgplk',
+			platform: 'massa-chrome',
+			count: m.dl_count_massa_ext(),
 			action: m.dl_action_install(),
 			secondary: true
 		},
 		{
-			label: m.dl_old_firefox(),
-			href: 'https://addons.mozilla.org/en-GB/firefox/addon/bearby/',
-			platform: 'old-firefox',
-			count: m.dl_count_legacy_addon(),
+			label: m.dl_massa_firefox(),
+			href: 'https://addons.mozilla.org/en-US/firefox/addon/massa/',
+			platform: 'massa-firefox',
+			count: m.dl_count_massa_addon(),
 			action: m.dl_action_install(),
 			secondary: true
 		}
